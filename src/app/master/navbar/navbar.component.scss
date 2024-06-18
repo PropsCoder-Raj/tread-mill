@@ -1,0 +1,16 @@
+.bg-primary-transparent{
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: Add a slight white overlay */
+    backdrop-filter: blur(10px); /* Adjust the blur intensity */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+
+    .navbar-transparent{
+        backdrop-filter: unset !important;
+        -webkit-backdrop-filter: unset !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-collapse{
+        height: 100vh !important;
+    }
+}
