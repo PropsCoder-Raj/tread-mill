@@ -39,13 +39,19 @@
                                         <p class="card-description">
                                             {{ video.subtitle }}
                                         </p>
+                                        <div class="image-gallery">
+                                            <div class="row">
+                                                <div *ngFor="let image of video.images" class="col-md-6">
+                                                    <img [src]="image" alt="Image">
+                                                </div>
+                                            </div>
+                                        </div>
                                         <p class="author">
                                             <button
                                                 class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
-                                                type="button">Shop Now
+                                                type="button">Shopping Cart
                                                 <i class="now-ui-icons shopping_bag-16 ml-2"></i></button>
                                         </p>
-                                        <img src="assets/img/dog{{i+1}}.jpg" alt="" [height]="video.imgHeight">
                                     </div>
                                 </div>
                             </div>
@@ -61,13 +67,19 @@
                                         <p class="card-description">
                                             {{ video.subtitle }}
                                         </p>
+                                        <div class="image-gallery">
+                                            <div class="row">
+                                                <div *ngFor="let image of video.images" class="col-md-6">
+                                                    <img [src]="image" alt="Image">
+                                                </div>
+                                            </div>
+                                        </div>
                                         <p class="author">
                                             <button
                                                 class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
-                                                type="button">Shop Now
+                                                type="button">Shopping Cart
                                                 <i class="now-ui-icons shopping_bag-16 ml-2"></i></button>
                                         </p>
-                                        <img src="assets/img/dog{{i+1}}.jpg" alt="" [height]="video.imgHeight">
                                     </div>
                                     <div class="col-md-5">
                                         <div class="card-image">
@@ -97,7 +109,7 @@
                 <div class="card trx-card">
                     <div class="trx-subtest animate__animated animate__fadeInUp">{{video.name}}</div>
                     <div class="trx-subtitle mb-4 animate__animated animate__fadeInUp">{{video.subtitle}}</div>
-                    <button class="btn shopnow-btn float-end animate__animated animate__fadeInUp" type="button">Shop Now
+                    <button class="btn shopnow-btn float-end animate__animated animate__fadeInUp" type="button">Shopping Cart
                         <i class="now-ui-icons shopping_bag-16 ml-2"></i></button>
                 </div>
             </div>
