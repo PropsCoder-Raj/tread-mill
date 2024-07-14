@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit{
+  tagLine: string = "Free Shipping | COD Available | Delivery Within 3 - 5 days";
   constructor(){}
 
   ngOnInit(): void {

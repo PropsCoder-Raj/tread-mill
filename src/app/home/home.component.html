@@ -1,20 +1,93 @@
 <app-navbar></app-navbar>
 <div class="wrapper">
-    <div class="page-header clear-filter">
+    <!-- <div class="page-header clear-filter">
         <div class="page-header-image" data-parallax="true" style="background-image:url('./assets/img/BG-Home.jpg');">
         </div>
         <div class="container">
             <div class="content-center brand">
                 <div class="dashboard-logo"><img src="/assets/img/DogsHouseLOgo.jpeg" /></div>
                 <h1 class="h1-seo text-black">Get Right Now</h1>
-                <!-- <h3 class="h1-subtitle text-black">Fitness Unleashed: Tailored for Your Dog's Health.</h3> -->
+                <h3 class="h1-subtitle text-black">Fitness Unleashed: Tailored for Your Dog's Health.</h3>
             </div>
             <h6 class="category category-absolute">Revolutionizing Fitness for Your Four-Legged Friend.</h6>
         </div>
+    </div> -->
+
+    <div class="cd-section show-on-medium-and-up hide-on-med-and-down" id="blogs" style="margin-top: 20vh;">
+        <div class="blogs-1" id="blogs-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <h2 class="title text-center">Latest Products</h2>
+                        <br>
+                        <div *ngFor="let video of videos; index as i">
+                            <div class="card card-plain card-blog" *ngIf="(i+1) % 2 == 1 || i == 0">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="card-image">
+                                            <video muted [id]="video.id" preload="auto" [muted]="'muted'" autoplay loop>
+                                                <source [src]="video.src" type="video/mp4">
+                                                Your browser does not support the video tag. {{i}}
+                                            </video>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h6 class="category text-info mt-3">Product {{i+1}}</h6>
+                                        <h3 class="card-title">
+                                            <a href="#pablo">{{video.name}}</a>
+                                        </h3>
+                                        <p class="card-description">
+                                            {{ video.subtitle }}
+                                        </p>
+                                        <p class="author">
+                                            <button
+                                                class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
+                                                type="button">Shop Now
+                                                <i class="now-ui-icons shopping_bag-16 ml-2"></i></button>
+                                        </p>
+                                        <img src="assets/img/dog{{i+1}}.jpg" alt="" [height]="video.imgHeight">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-plain card-blog" *ngIf="(i+1) % 2 == 0 && i != 0">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h6 class="category text-info">
+                                            Product {{i+1}}
+                                        </h6>
+                                        <h3 class="card-title">
+                                            <a href="#pablo">{{video.name}}</a>
+                                        </h3>
+                                        <p class="card-description">
+                                            {{ video.subtitle }}
+                                        </p>
+                                        <p class="author">
+                                            <button
+                                                class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
+                                                type="button">Shop Now
+                                                <i class="now-ui-icons shopping_bag-16 ml-2"></i></button>
+                                        </p>
+                                        <img src="assets/img/dog{{i+1}}.jpg" alt="" [height]="video.imgHeight">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="card-image">
+                                            <video muted [id]="video.id" preload="auto" [muted]="'muted'" autoplay loop>
+                                                <source [src]="video.src" type="video/mp4">
+                                                Your browser does not support the video tag. {{i}}
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div style="display: flex; justify-content: center;">
-        <div class="reelsContainer">
+    <div>
+        <div class="reelsContainer show-on-small-only hide-on-med-and-up">
             <div class="reel" *ngFor="let video of videos">
                 <video muted [id]="video.id" preload="auto" [muted]="'muted'" autoplay loop>
                     <source [src]="video.src" type="video/mp4">
@@ -24,7 +97,8 @@
                 <div class="card trx-card">
                     <div class="trx-subtest animate__animated animate__fadeInUp">{{video.name}}</div>
                     <div class="trx-subtitle mb-4 animate__animated animate__fadeInUp">{{video.subtitle}}</div>
-                    <button class="btn shopnow-btn float-end animate__animated animate__fadeInUp" type="button">Shop Now <i class="now-ui-icons shopping_bag-16 ml-2"></i></button>
+                    <button class="btn shopnow-btn float-end animate__animated animate__fadeInUp" type="button">Shop Now
+                        <i class="now-ui-icons shopping_bag-16 ml-2"></i></button>
                 </div>
             </div>
         </div>
