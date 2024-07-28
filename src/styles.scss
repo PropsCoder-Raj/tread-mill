@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -20,24 +19,30 @@ $tread-mill-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$tread-mill-theme: mat.define-light-theme((
-  color: (
-    primary: $tread-mill-primary,
-    accent: $tread-mill-accent,
-    warn: $tread-mill-warn,
-  )
-));
+$tread-mill-theme: mat.define-light-theme((color: (primary: $tread-mill-primary,
+                accent: $tread-mill-accent,
+                warn: $tread-mill-warn,
+            )));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($tread-mill-theme);
 
-body{
+.font-theme-rubik {
     font-family: "Rubik" !important;
 }
 
+.font-theme-poppins {
+    font-family: "Poppins" !important;
+}
+
+.font-theme-lato {
+    font-family: "Lato" !important;
+}
+
 @media only screen and (max-width: 600px) {
+
     .hide-on-small-only,
     .hide-on-small-and-down {
         display: none !important
@@ -109,5 +114,13 @@ body{
         display: block !important
     }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    // font-family: Roboto, "Helvetica Neue", sans-serif;
+}

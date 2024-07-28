@@ -16,12 +16,12 @@
 }
 
 marquee{
-    background: #ff9900;
+    background: #fff;
     color: #000;
     font-size: medium;
     font-weight: 700;
-    font-family: "Poppins" !important;
-    padding: 10px;
+    font-family: 'Rubik' !important;
+    padding: 2px;
     margin-bottom: -7px;
 }
 
@@ -31,4 +31,20 @@ marquee{
     // width: 2rem !important;
     padding: 0 !important;
     // min-width: 1rem !important;
+}
+
+.mix-top-navbar{
+    background: linear-gradient(240deg, #0b3e27, #197149) !important;padding: 5px !important;
+}
+
+.mix-navbar-navlink{
+    text-transform: unset !important;
+    font-size: small !important;
+}
+
+.mix-sm-navlink-logo{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    height: 10rem;
 }
