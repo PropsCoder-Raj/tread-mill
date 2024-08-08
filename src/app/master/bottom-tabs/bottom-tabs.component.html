@@ -1,0 +1,11 @@
+<div class="tabbar">
+    <label class="tabbar__item" *ngFor="let item of list">
+        <input type="radio" name="tabbar-a" [value]="item.value" [(ngModel)]="selectedValue">
+        <button class="tabbar__button">
+            <i [ngClass]=[item.icon]></i>
+            <div class="tabbar__label">
+                {{item.name}}
+            </div>
+        </button>
+    </label>
+</div>

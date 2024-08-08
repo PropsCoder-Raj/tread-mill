@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
+import { BottomTabsComponent } from './master/bottom-tabs/bottom-tabs.component';
 
 @NgModule({
   declarations: [

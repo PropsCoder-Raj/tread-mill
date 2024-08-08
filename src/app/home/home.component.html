@@ -50,10 +50,15 @@
                                             </div>
                                         </div>
                                         <p class="author">
-                                            <button
+                                            <button *ngIf="video.active == true"
                                                 class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
                                                 type="button">Find out more
-                                                <i class="now-ui-icons media-1_button-play ml-2"></i></button>
+                                                <i class="now-ui-icons media-1_button-play ml-2"></i>
+                                            </button>
+                                            <button *ngIf="video.active == false"
+                                                class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
+                                                type="button" disabled>Out Of Stock
+                                            </button>
                                         </p>
                                     </div>
                                 </div>
@@ -78,10 +83,15 @@
                                             </div>
                                         </div>
                                         <p class="author">
-                                            <button
+                                            <button *ngIf="video.active == true"
                                                 class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
                                                 type="button">Find out more
-                                                <i class="now-ui-icons media-1_button-play ml-2"></i></button>
+                                                <i class="now-ui-icons media-1_button-play ml-2"></i>
+                                            </button>
+                                            <button *ngIf="video.active == false"
+                                                class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
+                                                type="button" disabled>Out Of Stock
+                                            </button>
                                         </p>
                                     </div>
                                     <div class="col-md-5">
@@ -112,12 +122,20 @@
                 <div class="card trx-card">
                     <div class="trx-subtest animate__animated animate__fadeInUp">{{video.name}}</div>
                     <div class="trx-subtitle mb-2 animate__animated animate__fadeInUp">{{video.subtitle}}</div>
-                    <button class="btn shopnow-btn float-end animate__animated animate__fadeInUp" type="button">Find out more
-                        <i class="now-ui-icons media-1_button-play ml-2"></i></button>
+                    <button *ngIf="video.active == true"
+                        class="btn shopnow-btn float-end animate__animated animate__fadeInUp" type="button">Find out
+                        more
+                        <i class="now-ui-icons media-1_button-play ml-2"></i>
+                    </button>
+                    <button *ngIf="video.active == false"
+                        class="btn shopnow-btn float-end animate__animated animate__fadeInUp" type="button" disabled>Out
+                        Of Stock
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
+    <app-bottom-tabs></app-bottom-tabs>
     <app-footer></app-footer>
 </div>
