@@ -1,18 +1,5 @@
-<app-navbar></app-navbar>
-<div class="wrapper">
-    <!-- <div class="page-header clear-filter">
-        <div class="page-header-image" data-parallax="true" style="background-image:url('./assets/img/BG-Home.jpg');">
-        </div>
-        <div class="container">
-            <div class="content-center brand">
-                <div class="dashboard-logo"><img src="/assets/img/DogsHouseLOgo.jpeg" /></div>
-                <h1 class="h1-seo text-black">Get Right Now</h1>
-                <h3 class="h1-subtitle text-black">Fitness Unleashed: Tailored for Your Dog's Health.</h3>
-            </div>
-            <h6 class="category category-absolute">Revolutionizing Fitness for Your Four-Legged Friend.</h6>
-        </div>
-    </div> -->
 
+<div class="wrapper">
     <img class="show-on-medium-and-up hide-on-med-and-down mix-graph1" src="assets/img/graph1.png" />
     <img class="show-on-medium-and-up hide-on-med-and-down mix-graph2" src="assets/img/graph2.png" />
 
@@ -21,7 +8,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 ml-auto mr-auto">
-                        <h2 class="title text-center">Latest Products</h2>
+                        <h2 class="text-black text-center">Latest Products</h2>
                         <br>
                         <div *ngFor="let video of videos; index as i">
                             <div class="card card-plain card-blog" *ngIf="(i+1) % 2 == 1 || i == 0">
@@ -51,12 +38,12 @@
                                         </div>
                                         <p class="author">
                                             <button *ngIf="video.active == true"
-                                                class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
-                                                type="button">Find out more
+                                                class="btn shopnow-btn float-end"
+                                                type="button">Discover More
                                                 <i class="now-ui-icons media-1_button-play ml-2"></i>
                                             </button>
                                             <button *ngIf="video.active == false"
-                                                class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
+                                                class="btn cursor-no-drop shopnow-btn-inactive float-end"
                                                 type="button" disabled>Out Of Stock
                                             </button>
                                         </p>
@@ -85,11 +72,11 @@
                                         <p class="author">
                                             <button *ngIf="video.active == true"
                                                 class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
-                                                type="button">Find out more
+                                                type="button">Discover More
                                                 <i class="now-ui-icons media-1_button-play ml-2"></i>
                                             </button>
                                             <button *ngIf="video.active == false"
-                                                class="btn shopnow-btn float-end animate__animated animate__fadeInUp"
+                                                class="btn cursor-no-drop shopnow-btn-inactive float-end animate__animated animate__fadeInUp"
                                                 type="button" disabled>Out Of Stock
                                             </button>
                                         </p>
@@ -119,23 +106,18 @@
                     Your browser does not support the video tag.
                 </video>
 
-                <div class="card trx-card">
+                <div class="card trx-card" *ngIf="video.active == false">
                     <div class="trx-subtest animate__animated animate__fadeInUp">{{video.name}}</div>
-                    <div class="trx-subtitle mb-2 animate__animated animate__fadeInUp">{{video.subtitle}}</div>
-                    <button *ngIf="video.active == true"
-                        class="btn shopnow-btn float-end animate__animated animate__fadeInUp" type="button">Find out
-                        more
-                        <i class="now-ui-icons media-1_button-play ml-2"></i>
+                    <!-- <div class="trx-subtitle mb-2 animate__animated animate__fadeInUp">{{video.subtitle}}</div> -->
+                    <button class="btn shopnow-btn-inactive float-end animate__animated animate__fadeInUp" type="button" disabled>Out Of Stock
                     </button>
-                    <button *ngIf="video.active == false"
-                        class="btn shopnow-btn float-end animate__animated animate__fadeInUp" type="button" disabled>Out
-                        Of Stock
+                </div>
+                <div class="active-card" *ngIf="video.active == true">
+                    <div class="trx-subtest animate__animated animate__fadeInUp">{{video.name}}</div>
+                    <button class="btn shopnow-btn float-end animate__animated animate__fadeInLeftBig" type="button">Discover More
                     </button>
                 </div>
             </div>
         </div>
     </div>
-
-    <app-bottom-tabs></app-bottom-tabs>
-    <app-footer></app-footer>
 </div>

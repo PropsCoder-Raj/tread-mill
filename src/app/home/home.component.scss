@@ -11,16 +11,15 @@
 }
 
 .reelsContainer {
-    height: 100vh;
+    // height: 80vh;
     width: 100%;
     display: flex;
     overflow: auto;
     gap: 0.1em;
     flex-direction: column;
     // scroll-snap-type: y mandatory;
-    margin-top: 14vh !important;
+    // margin-top: 7vh !important;
 }
-
 
 .reelsContainer::-webkit-scrollbar {
     display: none;
@@ -55,8 +54,20 @@
 
     position: absolute;
     bottom: 0%;
+    left: 0%;
     margin: unset;
     padding: 0.2rem 0.3rem;
+}
+
+.reel .active-card .trx-subtest {
+    position: absolute;
+    bottom: 17%;
+    left: 0%;
+    font-size: xx-large;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 .reel .trx-subtest {
@@ -66,20 +77,24 @@
     font-weight: 600;
 }
 
-.reel .trx-subtitle {
+.reel .active-card .trx-subtitle {
     font-size: smaller;
     color: #fff;
     font-family: system-ui;
 }
 
 
-.reel .shopnow-btn {
-    background: #000 !important;
+.reel .active-card .shopnow-btn {
+    background: linear-gradient(to right, #a25de3, #ce78e8) !important;
     color: #fff;
-    border-radius: 7px;
-    // margin: unset;
-
-    i{
+    position: absolute;
+    bottom: 10%;
+    left: -5%;
+    font-size: large;
+    padding: 7px;
+    padding-left: 35px;
+    font-weight: bold;
+    i {
         font-size: x-small !important;
     }
 }
@@ -95,26 +110,33 @@
     border-radius: 14px !important;
 }
 
-.mix-graph1{
+.mix-graph1 {
     position: absolute;
     top: 70%;
     left: -10%;
 }
 
-.mix-graph2{
+.mix-graph2 {
     position: absolute;
     top: 180%;
     right: -10%;
 }
 
+.cursor-no-drop{
+    cursor: no-drop;
+}
+
 .blogs-1 {
     font-family: 'Poppins', sans-serif;
+
     .shopnow-btn {
-        background: #000 !important;
+        box-shadow: unset !important;
+        background: linear-gradient(to right, #a25de3, #ce78e8) !important;
         color: #fff;
         border-radius: 7px;
         margin: unset;
-        i{
+
+        i {
             font-size: x-small !important;
         }
     }
@@ -160,4 +182,9 @@
         max-width: 100px;
         /* Adjust the maximum width for very small screens */
     }
+}
+
+.ribbon-2 {
+    position: absolute;
+    background: #fff;
 }
