@@ -21,7 +21,9 @@ export class HomeComponent implements AfterViewInit {
 
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 
   ngAfterViewInit(): void {
     // const options = {

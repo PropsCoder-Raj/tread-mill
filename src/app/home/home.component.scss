@@ -52,8 +52,8 @@
 .reel .trx-card {
     background: rgba($color: #000000, $alpha: 0.5) !important;
 
-    position: absolute;
-    bottom: 0%;
+    position: absolutex;
+    bottom: 15%;
     left: 0%;
     margin: unset;
     padding: 0.2rem 0.3rem;
@@ -112,18 +112,22 @@
 
 .mix-graph1 {
     position: absolute;
-    top: 70%;
-    left: -10%;
+    top: 70vh;
+    left: -30%;
 }
 
 .mix-graph2 {
     position: absolute;
-    top: 180%;
-    right: -10%;
+    top: 180vh;
+    right: -30%;
 }
 
 .cursor-no-drop{
     cursor: no-drop;
+}
+
+.shopnow-btn-inactive{
+    font-weight: bold;
 }
 
 .blogs-1 {
@@ -133,9 +137,8 @@
         box-shadow: unset !important;
         background: linear-gradient(to right, #a25de3, #ce78e8) !important;
         color: #fff;
-        border-radius: 7px;
         margin: unset;
-
+        font-weight: bold;
         i {
             font-size: x-small !important;
         }

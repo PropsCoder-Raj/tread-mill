@@ -40,7 +40,6 @@
                                             <button *ngIf="video.active == true"
                                                 class="btn shopnow-btn float-end"
                                                 type="button">Discover More
-                                                <i class="now-ui-icons media-1_button-play ml-2"></i>
                                             </button>
                                             <button *ngIf="video.active == false"
                                                 class="btn cursor-no-drop shopnow-btn-inactive float-end"
@@ -114,7 +113,7 @@
                 </div>
                 <div class="active-card" *ngIf="video.active == true">
                     <div class="trx-subtest animate__animated animate__fadeInUp">{{video.name}}</div>
-                    <button class="btn shopnow-btn float-end animate__animated animate__fadeInLeftBig" type="button">Discover More
+                    <button class="btn shopnow-btn float-end animate__animated animate__fadeInLeftBig btn-anim" [routerLink]="['/products/details']" type="button">Discover More
                     </button>
                 </div>
             </div>

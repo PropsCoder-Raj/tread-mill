@@ -1,9 +1,29 @@
-<footer class="footer" data-background-color="black">
+<footer class="footer">
     <div class="container">
-        <div class="copyright" id="copyright">
-            {{today}}
-            Designed by
-            <a href="" target="_blank">PropsCoder-Raj</a>
+        <div class="mb-5 mt-5 navbar-nav">
+            <ul class="nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item col-sx-12 col-sm=12">
+                    <a class="tabs-container-footer" [routerLink]="['/static/terms-conditions']" role="tab">
+                        Terms and Conditions
+                    </a>
+                </li>
+                <li class="nav-item col-sx-12 col-sm=12">
+                    <a class="tabs-container-footer" [routerLink]="['/static/privacy-policy']" role="tab">
+                        Privacy Policy
+                    </a>
+                </li>
+                <li class="nav-item col-sx-12 col-sm=12">
+                    <a class="tabs-container-footer" [routerLink]="['/static/return-policy']" role="tab">
+                        Return Policy
+                    </a>
+                </li>
+            </ul>
         </div>
+    </div>
+    <div class="text-black text-boldm mb-4">
+        <img src="assets/img/pawprint.png" class="footer-img" alt="">
+        <br>
+        {{today}}
+        Designed by PropsCoder-Raj
     </div>
 </footer>
