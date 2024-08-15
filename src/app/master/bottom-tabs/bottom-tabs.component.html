@@ -1,5 +1,5 @@
 <div class="tabbar">
-    <label class="tabbar__item" *ngFor="let item of list">
+    <label class="tabbar__item" *ngFor="let item of list" [routerLink]="[item.link]">
         <input type="radio" name="tabbar-a" [value]="item.value" [(ngModel)]="selectedValue">
         <button class="tabbar__button">
             <i [ngClass]=[item.icon]></i>

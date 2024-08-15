@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class BottomTabsComponent implements OnInit {
   selectedValue: any = "home";
   list: any = [
-    { name: "home", icon: "tabbar__icon now-ui-icons shopping_shop", value: "home" },
-    { name: "categories", icon: "tabbar__icon now-ui-icons design_palette", value: "categories" },
-    { name: "tracking", icon: "tabbar__icon now-ui-icons location_pin", value: "tracking" },
-    { name: "personalization", icon: "tabbar__icon now-ui-icons objects_spaceship", value: "personalization" },
-    { name: "chat", icon: "tabbar__icon now-ui-icons ui-2_chat-round", value: "chat" },
+    { name: "home", link: "/home", icon: "tabbar__icon now-ui-icons shopping_shop", value: "home" },
+    { name: "categories", link: "/home", icon: "tabbar__icon now-ui-icons design_palette", value: "categories" },
+    { name: "tracking", link: "/home", icon: "tabbar__icon now-ui-icons location_pin", value: "tracking" },
+    { name: "personalization", link: "/home", icon: "tabbar__icon now-ui-icons objects_spaceship", value: "personalization" },
+    { name: "chat", link: "/home", icon: "tabbar__icon now-ui-icons ui-2_chat-round", value: "chat" },
   ]
 
   ngOnInit() {
